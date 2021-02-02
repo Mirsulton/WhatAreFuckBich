@@ -177,10 +177,11 @@ export default {
 
         return this.tasks.filter(t => t.isFavorite)
 
-      } else if (this.sortType === 'wqe') {
+      }
+      if (this.sortType === 'asd') {
 
         return this.tasks
-      } 
+      }
 
       return this.tasks
     },
