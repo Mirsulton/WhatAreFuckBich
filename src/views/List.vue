@@ -12,6 +12,7 @@
 
 
 
+
         </select>
 
 
@@ -161,7 +162,7 @@ export default {
 
 
     sortItem() {
-      let sortType = 1
+
 
 
       if (this.sortType === 'ewq') {
@@ -172,17 +173,15 @@ export default {
         return this.tasks.slice().sort((prev, curr) => Date.parse(prev.date) - Date.parse(curr.date));
       }
 
-      if (this.sortType   === 'wqe') {
+      if (this.sortType === 'wqe') {
 
-        return this.tasks.toggle(this.tasks.filter(t => t.isFavorite))
+        return this.tasks.filter(t => t.isFavorite)
 
-      }
-      if (this.sortType   === 'asd') {
+      } else if (this.sortType === 'wqe') {
 
         return this.tasks
+      } 
 
-
-      }
       return this.tasks
     },
 
